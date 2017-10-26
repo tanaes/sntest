@@ -11,9 +11,7 @@ before_install:
   - conda update --yes conda
 install:
   # install environment
-  - conda config --add channels bioconda
-  - conda config --add channels conda-forge
-  - conda create -n sntest snakemake==4.2.0
+  - conda env create --name sntest -f environment.yml
 before_script:
   - echo 'Running...'
 script:
