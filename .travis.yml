@@ -10,8 +10,8 @@ before_install:
   # Update conda itself
   - conda update --yes conda
 install:
-  # install setup environment
-  - conda create -n sntest snakemake==4.2.0
+  # install environment
+  - conda create -n sntest -c bioconda snakemake==4.2.0
 before_script:
   - echo 'Running...'
 script:
