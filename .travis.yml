@@ -17,11 +17,13 @@ before_script:
 script:
   # run tests
   - source activate sntest
-  - pip install nose
+  - echo 'Running in cluster mode, file tracking'
   - bash cluster_succeed.sh
   - rm -r results
+  - echo 'Running in cluster mode, script tracking'
   - bash cluster_fail.sh
   - rm -r results
+  - echo 'Running in cluster mode, script tracking, with log path created'
   - mkdir -p results/log
   - bash cluster_fail.sh
   - rm -r results
