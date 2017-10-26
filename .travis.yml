@@ -18,13 +18,13 @@ script:
   # run tests
   - source activate sntest
   - echo 'Running in cluster mode, file tracking'
-  - bash cluster_succeed.sh
+  - bash fake_cluster/cluster_succeed.sh
   - rm -r results
   - echo 'Running in cluster mode, script tracking'
-  - bash cluster_fail.sh
+  - bash fake_cluster/cluster_fail.sh
   - rm -r results
   - echo 'Running in cluster mode, script tracking, with log path created'
   - mkdir -p results/log
-  - bash cluster_fail.sh
+  - bash fake_cluster/cluster_fail.sh
   - rm -r results
   - source deactivate
