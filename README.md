@@ -1,0 +1,2 @@
+# sntest
+quick snakemake tests
