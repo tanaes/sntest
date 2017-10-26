@@ -1,0 +1,16 @@
+{
+    "__default__": {
+        "time"      : "4:00:00",
+        "n"         : 4,
+        "mem"       : 8,
+        "output"    : "cluster_logs/{rule}.{wildcards}.out",
+        "error"     : "cluster_logs/{rule}.{wildcards}.err"
+    },
+    "write_threads": {
+        "time"      : "4:00:00",
+        "n"         : 3,
+        "threads"   : 2,
+        "mem"       : 1
+    },
+}
+
